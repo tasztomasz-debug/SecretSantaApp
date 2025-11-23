@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Secret Santa Losowanie</title>
+        <style>
+            body {
+                background: linear-gradient(135deg, #eef9fb 0%, #f7d5ea 100%);
+                font-family: "Segoe UI", Arial, sans-serif;
+            }
+
+            /* Nagłówek z choinką i śnieżynkami */
+            h2::before {
+                content: "🎄❄️ ";
+            }
+            h2::after {
+                content: " ❄️🎄";
+            }
+
+            .container {
+                background: rgba(255, 255, 255, 0.8);
+                border-radius: 18px;
+                box-shadow: 0 4px 18px #b2c8d2;
+                padding: 20px 30px;
+                margin: 32px auto;
+                max-width: 520px;
+                border: 2px dashed #90c2e0;
+                position: relative;
+            }
+
+            /* Stylizowane bombki w rogu */
+            .container::after {
+                content: "🔴🟣🟡";
+                position: absolute;
+                right: 18px;
+                top: -22px;
+                font-size: 26px;
+            }
+
+            button {
+                background: linear-gradient(120deg, #c03363 0%, #65a4e6 100%);
+                color: white;
+                border: none;
+                padding: 8px 16px;
+                border-radius: 10px;
+                box-shadow: 0 2px 6px #c0336366;
+                cursor: pointer;
+                transition: background 0.3s;
+            }
+            button:hover {
+                background: linear-gradient(120deg, #e46074 60%, #86dcec 100%);
+            }
+
+            input[type="text"] {
+                border-radius: 8px;
+                border: 1px solid #b2c8d2;
+                padding: 6px 12px;
+                margin-right: 6px;
+            }
+
+            ul {
+                padding-left: 20px;
+                margin-bottom: 18px;
+            }
+            li {
+                margin: 7px 0;
+            }
+
+            #results {
+                margin-top: 28px;
+                background: #f6fbff;
+                border-radius: 14px;
+                border: 1px dotted #cbe0ed;
+                padding: 18px;
+                box-shadow: 0 1px 6px #e2d3ec;
+            }
+
+            p,
+            #results a {
+                font-size: 17px;
+                color: #333;
+            }
+
+            #results a {
+                color: #c03363;
+                font-weight: 600;
+                text-decoration: none;
+                margin-left: 10px;
+                transition: color 0.2s;
+            }
+            #results a:hover {
+                color: #2cb5df;
+            }
+
+            /* Dekoracyjne śnieżynki w tle */
+            body::before {
+                content: "❄️ ❄️   ❄️    ❄️";
+                position: fixed;
+                top: 30px;
+                left: 60px;
+                font-size: 28px;
+                opacity: 0.15;
+                z-index: -1;
+                letter-spacing: 43px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Secret Santa - Losowanie</h2>
+
+        <p>Dodaj lub usuń imiona uczestników:</p>
+        <input id="nameInput" type="text" placeholder="Wpisz imię" />
+        <button onclick="addName()">Dodaj imię</button>
+
+        <ul id="namesList"></ul>
+
+        <button onclick="draw()">Losuj Secret Santa</button>
+
+        <h3>Wyniki:</h3>
+
+        <div id="results" class="container"></div>
+
+        <script src="main.js"></script>
+    </body>
+</html>

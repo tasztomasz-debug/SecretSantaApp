@@ -74,7 +74,7 @@ function draw() {
         const p = document.createElement("p");
 
         // Zwykły tekst "Plik dla:"
-        const txt = document.createTextNode("Wynik losowania dla: ");
+        const txt = document.createTextNode("Plik dla:");
         p.appendChild(txt);
 
         // Hyperlink tylko z imieniem

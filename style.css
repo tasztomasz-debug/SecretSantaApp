@@ -57,6 +57,8 @@ button {
     cursor: pointer;
     transition: background 0.3s;
     font-size: 1em;
+    margin: 0 auto;
+    display: block;
 }
 button:hover {
     background: linear-gradient(120deg, #e46074 60%, #86dcec 100%);
@@ -64,10 +66,10 @@ button:hover {
 .delete-btn {
     background: linear-gradient(135deg, #ff4d4d 0%, #ff9999 100%);
     color: white;
-    width: 28px;
-    height: 28px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
-    font-size: 1.15em;
+    font-size: 0.5em;
     padding: 0;
     margin-left: 12px;
     border: none;
@@ -81,7 +83,7 @@ button:hover {
 .delete-btn:hover {
     background: #bdb3d9;
     color: #c03363;
-    transform: scale(1.09);
+    transform: scale(0.7);
 }
 
 input[type="text"] {
@@ -91,19 +93,58 @@ input[type="text"] {
     margin-right: 6px;
     font-size: 1em;
     width: 70%;
+    max-width: 520px;
     min-width: 120px;
     box-sizing: border-box;
+    margin: 12px auto;
+    display: flex;
 }
 
 ul {
-    padding-left: 20px;
-    margin-bottom: 18px;
-}
-li {
-    margin: 7px 0;
-    font-size: 1.08em;
+    list-style: none;
+    width: 520px;
+    margin: 12px auto 16px auto;
+    padding-left: 0;
 }
 
+li {
+    text-align: center;
+    position: relative;
+}
+
+li:nth-child(1)::before {
+    content: "🎅 ";
+}
+li:nth-child(2)::before {
+    content: "🤶 ";
+}
+li:nth-child(3)::before {
+    content: "🎄 ";
+}
+li:nth-child(4)::before {
+    content: "❄️ ";
+}
+li:nth-child(5)::before {
+    content: "⛄ ";
+}
+li:nth-child(6)::before {
+    content: "🌟 ";
+}
+li:nth-child(7)::before {
+    content: "🦌 ";
+}
+li:nth-child(8)::before {
+    content: "🛷 ";
+}
+li:nth-child(9)::before {
+    content: "🎁 ";
+}
+li:nth-child(10)::before {
+    content: "🔔 ";
+}
+li::before {
+    content: "🎶 "; /* domyślny symbol dla pozostałych */
+}
 #results {
     margin-top: 28px;
     background: #f6fbff;
@@ -118,8 +159,12 @@ p,
 #results a {
     font-size: 17px;
     color: #333;
+    text-align: center;
 }
-
+h3 {
+    font-size: 20px;
+    text-align: center;
+}
 #results a {
     color: #c03363;
     font-weight: 600;

@@ -55,6 +55,32 @@
             button:hover {
                 background: linear-gradient(120deg, #e46074 60%, #86dcec 100%);
             }
+            .delete-btn {
+                background: linear-gradient(
+                    135deg,
+                    #ff4d4d 0%,
+                    #ff9999 100%
+                ); /* łagodny gradient czerwieni i jasno różowego */
+                color: white;
+                width: 28px; /* niewielki rozmiar, idealny na ikonę/text */
+                height: 28px; /* okrągły przycisk */
+                border-radius: 50%; /* okrągły kształt */
+                font-size: 1.15em;
+                padding: 0;
+                margin-left: 12px;
+                border: none;
+                box-shadow: 0 2px 5px #d8cdf244;
+                cursor: pointer;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                transition: background 0.2s, transform 0.13s;
+            }
+            .delete-btn:hover {
+                background: #bdb3d9; /* subtelna zmiana koloru przy hover */
+                color: #c03363;
+                transform: scale(1.09);
+            }
 
             input[type="text"] {
                 border-radius: 8px;
@@ -137,10 +163,13 @@
                     padding: 6px 10px;
                 }
                 button {
-                    width: 100%;
+                    position: center;
+                    width: 60%;
                     margin-bottom: 6px;
                     font-size: 0.98em;
                     padding: 9px 10px;
+                    display: block;
+                    margin: 6px auto;
                 }
                 #results {
                     padding: 10vw 2vw;

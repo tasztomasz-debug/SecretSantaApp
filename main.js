@@ -22,7 +22,8 @@ function renderList() {
         const li = document.createElement("li");
         li.textContent = name + " ";
         const btn = document.createElement("button");
-        btn.textContent = "Usuń";
+        btn.textContent = "X";
+        btn.className = "delete-btn";
         btn.onclick = () => removeName(index);
         li.appendChild(btn);
         list.appendChild(li);
@@ -94,8 +95,13 @@ function draw() {
 `;
 
         const blob = new Blob([fileContent], { type: "text/plain" });
+        const now = new Date();
+        const day = String(now.getDate()).padStart(2, "0");
+        const month = String(now.getMonth() + 1).padStart(2, "0");
+        const dateString = `${day}-${month}`;
+
         a.href = URL.createObjectURL(blob);
-        a.download = `${giver}.txt`;
+        a.download = `${giver}_${dateString}.txt`;
         a.textContent = giver;
 
         p.appendChild(a);

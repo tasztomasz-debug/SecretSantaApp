@@ -79,7 +79,7 @@ function draw() {
         // Hyperlink tylko z imieniem
         const a = document.createElement("a");
         const fileContent = `
-       ❄️       ❄️
+              
             * 
            /|\\
           /*o \\
@@ -87,10 +87,10 @@ function draw() {
         /****o* \\
             |
     =================
-   Jesteś św. Mikołajem dla:
+   Jesteś sw. Mikolajem dla:
         ${receiver}
     =================
- Wesołych, radosnych Świąt!
+ Wesolych, radosnych Swiat!
 `;
 
         const blob = new Blob([fileContent], { type: "text/plain" });

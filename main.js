@@ -90,7 +90,7 @@ function draw() {
    Jesteś sw. Mikolajem dla:
         ${receiver}
     =================
- Wesolych, radosnych Swiat!
+   Wesolych, radosnych Swiat!
 `;
 
         const blob = new Blob([fileContent], { type: "text/plain" });

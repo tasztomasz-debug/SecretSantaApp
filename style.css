@@ -1,0 +1,179 @@
+body {
+    background: linear-gradient(135deg, #eef9fb 0%, #f7d5ea 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: "Segoe UI", Arial, sans-serif;
+    margin: 0;
+}
+
+h2::before {
+    content: "🎄❄️ ";
+}
+h2::after {
+    content: " ❄️🎄";
+}
+h2 {
+    font-size: clamp(18px, 5vw, 28px);
+    max-width: 95vw;
+    width: auto;
+    margin: 0 auto 16px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 18px;
+    box-shadow: 0 4px 18px #b2c8d2;
+    padding: 20px 30px;
+    margin: 32px auto;
+    max-width: 520px;
+    width: 95vw;
+    border: 2px dashed #90c2e0;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.container::after {
+    content: "🔴🟣🟡";
+    position: absolute;
+    right: 18px;
+    top: -22px;
+    font-size: 26px;
+    pointer-events: none;
+}
+
+button {
+    background: linear-gradient(120deg, #c03363 0%, #65a4e6 100%);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px #c0336366;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 1em;
+}
+button:hover {
+    background: linear-gradient(120deg, #e46074 60%, #86dcec 100%);
+}
+.delete-btn {
+    background: linear-gradient(135deg, #ff4d4d 0%, #ff9999 100%);
+    color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    font-size: 1.15em;
+    padding: 0;
+    margin-left: 12px;
+    border: none;
+    box-shadow: 0 2px 5px #d8cdf244;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, transform 0.13s;
+}
+.delete-btn:hover {
+    background: #bdb3d9;
+    color: #c03363;
+    transform: scale(1.09);
+}
+
+input[type="text"] {
+    border-radius: 8px;
+    border: 1px solid #b2c8d2;
+    padding: 6px 12px;
+    margin-right: 6px;
+    font-size: 1em;
+    width: 70%;
+    min-width: 120px;
+    box-sizing: border-box;
+}
+
+ul {
+    padding-left: 20px;
+    margin-bottom: 18px;
+}
+li {
+    margin: 7px 0;
+    font-size: 1.08em;
+}
+
+#results {
+    margin-top: 28px;
+    background: #f6fbff;
+    border-radius: 14px;
+    border: 1px dotted #cbe0ed;
+    padding: 18px;
+    box-shadow: 0 1px 6px #e2d3ec;
+    word-break: break-word;
+}
+
+p,
+#results a {
+    font-size: 17px;
+    color: #333;
+}
+
+#results a {
+    color: #c03363;
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 10px;
+    transition: color 0.2s;
+    word-break: break-word;
+}
+#results a:hover {
+    color: #2cb5df;
+}
+
+@media (max-width: 520px) {
+    .container {
+        padding: 6vw 3vw;
+        margin: 8vw auto 10vw auto;
+        max-width: 99vw;
+        border-radius: 12px;
+    }
+    .container::after {
+        font-size: 22px;
+        right: 8px;
+        top: -16px;
+        letter-spacing: -3px;
+    }
+    input[type="text"] {
+        width: 95%;
+        margin-bottom: 8px;
+        font-size: 1em;
+        padding: 6px 10px;
+        background-color: rgba(255, 255, 255, 0.6); /* białe tło, 60% krycia */
+        border: 1px solid rgba(178, 200, 210, 0.5); /* przezroczysta obwódka */
+        border-radius: 8px;
+        box-sizing: border-box;
+    }
+    button {
+        position: center;
+        width: 60%;
+        margin-bottom: 6px;
+        font-size: 0.98em;
+        padding: 9px 10px;
+        display: block;
+        margin: 6px auto;
+    }
+    #results {
+        padding: 10vw 2vw;
+        font-size: 1em;
+    }
+    ul {
+        padding-left: 9px;
+        font-size: 1em;
+    }
+    li {
+        font-size: 1em;
+        margin: 7px 0;
+    }
+}

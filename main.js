@@ -81,30 +81,36 @@ function draw() {
         const a = document.createElement("a");
         const fileContent = `
               
-            * 
-           /|\\
-          /*o \\
-         /**O* \\
-        /****o* \\
-            |
-    =================
-   Jesteś sw. Mikolajem dla:
-        ${receiver}
-    =================
+              * 
+             /|\\
+            /*o \\
+           /**O* \\
+          /****o* \\
+              |
+      =================
+   Jestes sw. Mikolajem dla:
+
+    --> ${receiver} <--
+
+      =================
    Wesolych, radosnych Swiat!
 `;
 
         const blob = new Blob([fileContent], { type: "text/plain" });
-        const now = new Date();
-        const day = String(now.getDate()).padStart(2, "0");
-        const month = String(now.getMonth() + 1).padStart(2, "0");
-        const dateString = `${day}-${month}`;
 
         a.href = URL.createObjectURL(blob);
-        a.download = `${giver}_${dateString}.txt`;
+        a.download = `Plik_dla_${giver}_Secret_Santa.txt`;
         a.textContent = giver;
 
         p.appendChild(a);
         resultsDiv.appendChild(p);
     });
 }
+document
+    .getElementById("nameInput")
+    .addEventListener("keydown", function (event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            addName();
+        }
+    });

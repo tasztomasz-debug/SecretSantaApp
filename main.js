@@ -1,5 +1,14 @@
 let names = [];
 
+window.onload = function () {
+    alert(
+        "Dodaj imiona uczestników po kolei wpisując w pole tekstowe i klikając 'Dodaj imię'.\n\n" +
+            "Po uzupełnieniu listy naciśnij przycisk 'Losuj!', który wygeneruje pliki tekstowe oznaczone imionami uczestników.\n\n" +
+            "Rozdaj pliki uczestnikom, ale nie podglądaj zawartości ;-)\n\n" +
+            "Miłej zabawy i wesołych świąt!)"
+    );
+};
+
 function addName() {
     const input = document.getElementById("nameInput");
     const name = input.value.trim();
